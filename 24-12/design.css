@@ -1,0 +1,24 @@
+body{
+    background-image: url("./port.jpg") ;
+    
+}
+header{
+    background-color: powderblue;
+}
+#p1{
+    color: whitesmoke;
+}
+h2{
+    color: white;
+}
+li{
+    color: aqua;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: blue;
+    text-decoration: underline;
+}
