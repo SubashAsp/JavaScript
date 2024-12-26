@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script src="./12-26.js"></script>
+</head>
+<body>
+    <h4>getElementById</h4>
+    <div id="div1">
+        This is a div
+    </div>
+    <button onclick="changeContent()">Click me</button>
+
+    <hr>
+
+    <div>
+    <h4>tagName</h4>
+    <p>Para 1</p>
+    <p>Para 2</p>
+    <button onclick="colorChange()">Check me</button>
+    </div>
+
+    <hr>
+
+    <h4>innerText</h4>
+    <p id="p1">para</p>
+    <button onclick="changeText()">Click me</button>
+<hr>
+    <h4>diff bwt innerhtml / innertext</h4>
+    <p id="p2">Paragraph is in <b>bold</b></p>
+    <button onclick="showText()">click</button>
+    <hr>
+    <h4>create new element</h4>
+    <button onclick="createNew()">click</button>
+    <hr>
+    <h4>delete child</h4>
+    <div id="div3">
+        <div id="div4">this is the unwanted div</div>
+        <button onclick="clearDiv()">remove</button>
+    </div>
+    <hr>
+    <h4>append</h4>
+    <div id="div5">
+        
+    </div>
+    <button onclick="getNew()">click</button> 
+    <hr>
+    <h4>query selector</h4>
+    <p id="para">Lorem ipsum dolor sit.</p>
+    <button onclick="changeIt()">click</button>
+    <hr>
+    <h4>shadow dom</h4>
+    <div id="d7">
+        <p>this is not in shadom dom</p>
+    </div>
+    <button onclick="onIt()">shadowdom</button>
+    
+</body>
+</html>
