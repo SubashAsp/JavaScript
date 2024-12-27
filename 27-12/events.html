@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./event.js"></script>
+</head>
+<body>
+    <h4>Copy Event</h4>
+    <div id="div1" oncopy="text()">Copy the content</div>
+    <br><br>
+    
+    <div oncopy="text1()">Copy the content</div>
+    <hr>
+    <h4>Cut Event</h4>
+    <div id="div2">hello</div>
+    <hr>
+    <h4>Paste Event</h4>
+    <input type="text" onpaste="get()" value="paste it">
+    <p id="samp"></p>
+    <hr>
+    <h4>print event</h4>
+    <p>print status</p>
+    <p id="print"></p>
+    <hr>
+    <h4>Drag event</h4>
+    <div id="drag">Drag it</div><br><br><br><br>
+    <div id="drop">Drop</div>
+    <hr>
+    <h4>mouse event</h4>
+    <div id="div3">
+        <p>Mouse Hovering</p>
+    </div><br>
+    <div id="div4">
+        <p>mouse event</p>
+    </div>
+    <hr>
+    <h4>connection event</h4>
+    <div>connection status</div>
+    <div id="div5"></div>
+    <hr>
+    
+</body>
+</html>
