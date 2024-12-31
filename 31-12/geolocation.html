@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation</title>
+</head>
+<body>
+    <h4>Geolocation</h4>
+    <p>This is my location latitude<span id="lat"></span>.This is my longitude <span id="lon"></span></p>
+    <button id="btn">get location</button>
+    <script>
+        const lat = document.getElementById('lat');
+        const lon = document.getElementById('lon');
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click',()=>{
+            navigator.geolocation.getCurrentPosition(show,error);
+        });
+
+        function show(position){
+            console.log(position.coords.latitude);
+            
+            lat.innerText= position.coords.latitude;
+            console.log(position.coords.longitude);
+            
+            lon.innerText = position.coords.longitude;
+        }
+        function error(error){
+             if(error.code == error.PERMISSION_DENIED){
+                alert('permission denied');
+             };
+        }
+
+       
+    </script>
+</body>
+</html>
