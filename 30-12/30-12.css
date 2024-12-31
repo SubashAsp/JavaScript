@@ -1,0 +1,15 @@
+/* CSS Transition */
+#css_Transition{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+#css_Transition:hover{
+    transition: width 5s, background-color 5s;
+    background-color: black;
+}
+
+#fullScreenElement{
+    background-color: aqua;
+    width: 1rem;
+}
