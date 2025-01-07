@@ -1,0 +1,130 @@
+/* any hover */
+a{
+    text-decoration: none;
+}
+
+@media (any-hover: hover){
+    a:hover{
+        color: red;
+        background: powderblue;
+    }
+}
+
+/* any pointer */
+input[type="checkbox"]:checked{
+    background: green;
+}
+
+@media (any-pointer: fine){
+    input[type="checkbox"]{
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border: 1px solid blue;
+    }
+}
+
+@media (any-pointer: coarse){
+    input[tupe="checkbox"]{
+
+    }
+}
+
+/* color */
+p{
+    color: red;
+}
+
+@media (color){
+    p{
+        color: blue;
+    }
+}
+
+@media (min-color-index: 15000){
+    p{
+        color: #147ef1;
+    }
+}
+
+em{
+    text-emphasis-color: red;
+    text-emphasis-style: "*"
+}
+
+#columnruler{
+    columns: 4;
+    column-rule-color: red;
+    column-rule-style: solid; 
+}
+
+#heading{
+    color: red;
+}
+@media print{
+    #heading{
+        color: blue;
+    }
+}
+@media print and (orientation:landscape){
+    #heading{
+        color: yellow;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #screening{
+        color: blue;
+    }
+}
+
+@media screen and (max-width: 400px){
+    #screening{
+        color: red;
+    }
+}
+
+/* max width */
+
+div{
+    background-color: black;
+    height: 100px
+}
+
+@media screen and (max-width: 1000px){
+    div{
+        background-color: yellow;
+    }
+}
+
+@media screen and (max-width: 800px){
+    div{
+        background-color: green;
+    }
+}
+
+@media screen and (max-width: 400px){
+    div{
+        background-color: blue;
+    }
+}
+
+/* min width */
+
+#minimum{
+    background-color: red;
+    height: 100px;
+}
+
+@media screen and (min-width: 400px){
+    #minimum{
+        background-color: blue; 
+    }
+}
+
+@media screen and (min-width: 800px){
+    #minimum{
+        background-color: yellow;
+    }
+}
+
