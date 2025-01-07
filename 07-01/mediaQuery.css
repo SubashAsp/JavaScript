@@ -128,3 +128,48 @@ div{
     }
 }
 
+/* max width with img and text */
+
+img{
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+
+@media screen and (max-width: 600px)
+{
+    img{
+        float: none;
+    }
+}
+
+/* media query with flex */
+
+.container{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.one{
+    text-align: center;
+    align-content: center;
+    margin: 5px;
+    background-color: gray;
+    height: 100px;
+    flex-basis: 20%;
+}
+
+@media screen and (max-width: 800px){
+    .one{
+        flex-basis: 40%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .one{
+        flex-basis: 100%;
+    }
+}
