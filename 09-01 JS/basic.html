@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- toChangeText -->
+    <h4><u>toChangeText</u></h4>
+    <p class="changeText">Lorem ipsum dolor sit amet.</p>
+    <button onclick="changeText()">changeText</button>
+    <hr>
+    <h4><u>numberGuessGame</u></h4>
+    <label for="userNumber">Guess the number from 1 to 100 and enter into the box</label>
+    <input type="number" class="numberGuess" placeholder="Enter the number" required>
+    <button type="button" class="button">sumbit</button>
+    <p class="result">Result :</p>
+    <p class="enteredNumber"></p>
+
+    <script>
+        // toChangeText
+        function changeText() {
+            let toChange = document.querySelector(".changeText")
+            toChange.textContent = "This is a changed text"
+        }
+
+        // guessTheNumber
+        let userNumber = document.querySelector(".numberGuess");
+        let button = document.querySelector(".button");
+        let result = document.querySelector(".result");
+        let enteredNumber = document.querySelector(".enteredNumber")
+        let randomNumber = generateRandomNumber();
+        console.log(randomNumber);
+        // forGeneratingRandomNumber
+        function generateRandomNumber() {
+            let number = Math.floor(Math.random(1, 100) * 100)
+            return number;
+        }
+        // callingFunction
+        button.addEventListener("click", guessNumber)
+
+        function guessNumber() {
+            // if (enteredNumber.length <= 10) {
+                if (userNumber.value == randomNumber) {
+                    result.textContent = "Result : Congratulations ! you gussed the correct answer"
+                }
+                else if (userNumber.value < randomNumber) {
+                    result.textContent = "Result : Your are too low"
+                    enteredNumber.textContent += userNumber.value + "  "
+                    button.addEventListener("click", guessNumber)
+                }
+                else if (userNumber.value > randomNumber) {
+                    result.textContent = "Result : Your are too high"
+                    enteredNumber.textContent += userNumber.value + "  "
+                    button.addEventListener("click", guessNumber);
+                }
+                else {
+                    result.textContent = "Entered text is invalid or not a number"
+                }
+            }
+        // }
+
+    </script>
+</body>
+
+</html>
