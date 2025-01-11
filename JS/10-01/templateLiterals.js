@@ -32,19 +32,24 @@ function addTwo() {
     let num1 = parseFloat(firstNum.value);
     let num2 = parseFloat(secondNum.value);
     let sum = num1 + num2;
-    console.log(typeof(sum));
+    console.log(typeof (sum));
     console.log(sum);
-    resultNum.textContent = " Sum is "+sum;
-    
+    resultNum.textContent = " Sum is " + sum;
+
 }
 
-// adding two strings
-let strOne =document.getElementById("firstName");
+//addingTwoStrings
+let firstName = "John"
+let secondName = "Doe"
+console.log(firstName + " " + secondName)
+
+// addingUserGivenstrings
+let strOne = document.getElementById("firstName");
 let strTwo = document.getElementById("secndName");
 let strResult = document.getElementById("str_Result")
-console.log(typeof(strOne))
+console.log(typeof (strOne))
 
-function addStr(){
+function addStr() {
     console.log(strOne.value);
     strResult.textContent = `${strOne.value + strTwo.value}`;
 }
