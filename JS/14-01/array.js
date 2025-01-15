@@ -55,4 +55,14 @@ console.log("")
 console.log("copywithin")
 
 // copywithin
-let array01 = []
+let array01 = ["a","b","c","d","e"]
+console.log(array01.copyWithin(0,2,4))
+console.log(array01.copyWithin(1,3))
+console.log(array01.copyWithin(2))
+
+// using copywithin on sparse array
+let array02 = [1, , 2]
+console.log(array02.copyWithin(1,0,1))
+
+
+
