@@ -56,13 +56,32 @@ console.log("copywithin")
 
 // copywithin
 let array01 = ["a","b","c","d","e"]
-console.log(array01.copyWithin(0,2,4))
-console.log(array01.copyWithin(1,3))
-console.log(array01.copyWithin(2))
+console.log(array01.copyWithin(0,2,4)) //target,starting,ending
+console.log(array01.copyWithin(1,3))  //target,starting
+console.log(array01.copyWithin(2))  
 
 // using copywithin on sparse array
 let array02 = [1, , 2]
 console.log(array02.copyWithin(1,0,1))
 
+console.log("")
+// indexof
+console.log("indexof()")
+let insect = ['ant', 'grasshopper', 'bettle', 'ladybug', 'bullet ant']
+console.log(insect.indexOf('bettle'))  //searchElement
+console.log(insect.indexOf('ladybug', 1)) //searchElement, fromIndex
+console.log(insect.indexOf('fly'))
+
+// occurrence of an element
+let occurArray = ["a", "b", "a", "c", "a", "d"]
+let element = "a"
+let indices = []
+let idx = occurArray.indexOf(element)
+while (idx !== -1)
+{
+    indices.push(idx)
+    idx = occurArray.indexOf(element, idx + 1)
+}
+console.log(indices)
 
 
