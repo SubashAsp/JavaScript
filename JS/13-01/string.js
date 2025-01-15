@@ -65,4 +65,4 @@ console.log(stringLength.toLowerCase())
 // updating parts of string
 let str = "Godzilla"
 let updatedStr = str.replace("God", "Mo")
-console.log
+console.log(updatedStr)
