@@ -66,3 +66,46 @@ console.log(stringLength.toLowerCase())
 let str = "Godzilla"
 let updatedStr = str.replace("God", "Mo")
 console.log(updatedStr)
+
+// to update all occurrance in the string
+let updStr = "this is the firstOcc and this secondOcc";
+let updStr2 = updStr.replaceAll("this", "here");
+console.log(updStr2);
+
+// number vs strings
+// string to number
+let myStr = "66";
+console.log(typeof(myStr));
+let myNum = Number(myStr);
+console.log(typeof(myNum));
+
+// number to string
+let mynum2 = 246;
+console.log(typeof(mynum2));
+let myStr2 = String(mynum2);
+console.log(typeof(myStr2));
+
+// presence of substring /startsWith()
+let subStr = "godzilla";
+if(subStr.startsWith("zilla"))
+{
+    console.log("presence of substring in start.");
+}
+else{
+    console.log("substring is not present in the start.")
+}
+// endsWith()
+if(subStr = "zilla")
+{
+    console.log("pesence of substring in the end.");
+}
+else{
+    console.log("substring is not present in the end.")
+}
+
+// repeated occurrence in a string
+let repStr = "Godzilla is all so known as Godzilla";
+let firstOcc = repStr.indexOf("Godzilla");
+let secondOcc = repStr.indexOf("Godzilla",firstOcc + 1);
+console.log(firstOcc);
+console.log(secondOcc)
