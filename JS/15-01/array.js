@@ -153,8 +153,28 @@ console.log("")
 console.log("splice()")
 
 let i = [1, 2, 3, 4];
-i.splice(0,2,0)
+i.splice(0,0,0)
 console.log(i)
+
+// deletecount as negative
+let i1 = [1, 2, 3, 4]
+i1.splice(0,-1,6)
+console.log(i1)
+
+// when deletecount is greater than array length
+let i2 = [1, 2, 3, 4, 5]
+i2.splice(0,6,7)
+console.log(i2)
+
+// to remove all elements from a specific index
+let i3 = [1, 2, 3, 4, 5]
+i3.splice(1);
+console.log(i3);
+
+// splice on sparse array
+let i4 = [1, ,3, ,5];
+i4.splice(1,2);
+console.log(i4);
 //
 // console.log("")
 
