@@ -1,5 +1,5 @@
 // invoking a function
-function myFunction(){
+function myFunction() {
     console.log("Hello !");
 }
 myFunction()
@@ -13,10 +13,20 @@ const madeAnotherString = myArray.join();//without parameter
 console.log(madeAnotherString);
 
 // default parameter
-function hello(name = "subash"){
+function hello(name = "subash") {
     console.log(name);
 }
 hello("karthi");
 hello();
 
 // Anonymous function
+let greet = function (name) {
+    console.log(name);
+}
+greet("karthi");
+
+// arrow function
+let greet1 = (name1) => {
+    console.log(name1);
+}
+greet1("subash");

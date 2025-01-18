@@ -121,7 +121,7 @@ console.log(e3)
 // merging two arrays
 let e1 = [1, 2]
 let e2 = [3, 4]
-e1.push(...e2)
+e1.push(...e2)//spread operator
 console.log(e1)
 
 console.log("");
