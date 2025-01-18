@@ -12,8 +12,8 @@ else {
 console.log(decision)
 
 // else.........if
-const select = document.querySelector("select");
-const para = document.querySelector("p");
+let select = document.querySelector("select");
+let para = document.querySelector("p");
 
 select.addEventListener("change", setWeather);
 
@@ -37,7 +37,41 @@ function setWeather() {
     }
 }
 
+// nesting if ... else
+let select1 = document.getElementById("weather2");
+let temperature = document.getElementById("temp");
+let result = document.getElementById("result");
+temperature.addEventListener("input",setWeather2);
+select1.addEventListener("change",setWeather2);
+function setWeather2(){
+    let choice = select1.value;
+    let temp = parseFloat(temperature.value);
+    // console.log(temp);
+    if(choice === "sunny"){
+        if(temp <85){
+            result.textContent = "Great day to go to beach😊.";
+        }
+        else{
+            result.textContent = "Hot day, avoid going out.";
+        }
+    }
+    // logical statement
+    else if(choice === "snowing"){
+        if(temp >= 0  && temp <=32){
+            result.textContent = "Great its snowing.";
+        }
+        else if(temp < 0){
+            result.textContent = "Its cold out there 🥶.";
+        }
+        else{
+            result.textContent = "It is a warm day."
+        }
+    }
+}
+
+console.log("");
 // switch case
+console.log("switch case");
 let expression = 2;
 switch(expression)
 {
@@ -57,7 +91,9 @@ switch(expression)
         
 }
 
+console.log("");
 // ternary operator
+console.log("tenary operator")
 let name1 = "subash"
 let name2 = "karthi"
 name1 === "subash" ? console.log(true) : console.log(false)
