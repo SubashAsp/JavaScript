@@ -33,7 +33,13 @@ for (let key in detail) {
 for (let key in detail) {
     console.log(key + ": " + detail[key]);
 }
+//for...each
+let a1 = [1, 2, 3, 4, 5];
+a1.forEach(function(a1){
+    console.log(a1 * 2);
+} )
 // 
+
 console.log("");
 
 console.log("breaking loops");
