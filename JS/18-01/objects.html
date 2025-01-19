@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //creating an object
+        let person = {
+            name: "Subash",//key: value;
+            age: 22,
+            city: "erode",
+        }
+        console.log(person);//to print whole keys and object in object
+        console.log(Object.keys(person));//to print keys
+
+        // Dot notation
+        // object as object properties
+        let person1 = {
+            name1: {
+                first: "karthik",
+                second: "raja"
+            },
+            age1: 22,
+            city: "Erode"
+        }
+        console.log(person1.name1.first);
+        console.log(person1.name1.second);
+
+        // bracket notation
+        console.log(person1["age1"]);
+        console.log(person1["name1"]["first"]);
+
+        // bracket notation for object property held in variable
+        const person2 = {
+            name2: "Karthi",
+            age2: 32,
+        };
+        let heldVariable = "name2";
+        console.log(person2[heldVariable]);
+
+        // setting object members
+        // using dot notation
+        let person3 = {};
+        person3.name = "subash";
+        person3.age = 22;
+        console.log(person3);
+        // using bracket notation
+        let myDataName = "mail";
+        let myDataValue = "subash@gmail.com";
+        person3[myDataName] = myDataValue;
+        console.log(person3);
+
+        // updating object members
+        let person4 = {
+            name4: "subash",
+            age: 22,
+        }
+        console.log(person4);
+        person4.name4 = "karthi";
+        person["age"] = 23;
+        console.log("updated members.");
+        console.log(person4);
+
+        // finction in object
+        let person5 = {
+            name: "subash",
+            age: 22,
+            bio: function () {
+                console.log("This is my bio.");
+                console.log(person5.name);
+                console.log(person5.age);
+            }
+        }
+        person5.bio();
+
+        let person6 = {
+            name: "karthi",
+            age: 22,
+            detail() {
+                console.log("This is my detail");
+                console.log(person6.name);
+                console.log(person6.age);
+            }
+        }
+        person6.detail();
+
+        // this in object
+        let person7 = {
+            name: "subash",
+            age: 22,
+            answer() {
+                console.log(this.name);
+            }
+        }
+        person7.answer();
+
+        // constructor
+        function Person(firstName, lastName, age) // constructor function
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.greet = function () {
+                console.log(`Hello, ${this.firstName} ${this.lastName}!`);
+            };
+        }
+
+        Person.prototype.calcage = function () {
+
+        }
+
+        function Subash(firstName, city) {
+            this.name = firstName,
+                this.city = city
+        }
+        Subash.prototype.logu = function ()//
+        {
+            console.log("new function");
+        }
+        const person8 = new Person("karthi", "Raja", 22);//constructor
+        const person9 = new Person("deepan", "chakara", 22);
+        const person10 = new Subash("xxx", "yyy");
+        console.log(person8.firstName);
+        console.log(person8.age);
+        person8.greet();//call
+        person10.logu();
+        console.log(person8);
+        console.log(person9);
+        console.log(person10);
+
+        console.log(person8 instanceof Subash);
+        console.log(person10.__proto__ === Subash.prototype);// making sure that Subash.prototype is not  prototype of Subash but it is a prototype of object created by Subash
+
+        // prototype & inheritance
+        const birds = {
+            eats: true
+        };
+        const sparrow = Object.create(birds);
+        sparrow.flies = true;
+        console.log(sparrow.eats);  // parent(inherited from animal)
+        console.log(sparrow.flies);  // child(defined on rabbit)
+
+        // class creation
+        class Detail {
+            constructor(firstName, lastName, age) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+            }
+            // Method inside the class
+            greet() {
+                console.log(`Hello, my name is ${this.firstName} ${this.lastName}`);
+            }
+        }
+        const person11 = new Detail("Subash", "Thiru", 22);
+        person11.greet();
+
+        // omitting constructor
+        class Animal {
+            sleep() {
+                console.log("zzzzzzz");
+            }
+        }
+        const spot = new Animal();
+        spot.sleep(); // 'zzzzzzz'
+
+        // Inheritance
+        class Pet // parent class
+        {
+            constructor(name, sound) {
+                this.name = name;
+                this.sound = sound;
+            }
+            speak() {
+                console.log(`${this.name} says ${this.sound}`);
+            }
+        }
+        class Hedgehog extends Pet // child class
+        {
+            constructor(name, color) {
+                super(name, "Qzz");  // Calling parent class constructor
+                this.color = color;
+            }
+            eat() {
+                console.log(`${this.name} is eating the food.`);
+            }
+        }
+        const hedgehog = new Hedgehog("akash", "black");
+        hedgehog.speak();  
+        hedgehog.eat();  
+
+
+    </script>
+</body>
+
+</html>
