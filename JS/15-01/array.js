@@ -1,9 +1,9 @@
 // array
-let animals = ["cat","dog","pig"]
+let animals = ["cat", "dog", "pig"]
 console.log(animals.length)
 
 // adding elements in array
-animals.push("cow","goat")
+animals.push("cow", "goat")
 console.log(animals.length)
 
 // printing Array
@@ -56,8 +56,8 @@ let array3 = array1.concat(array2);
 console.log(array3)
 
 // concat sparse
-let firstArray = [1, , 2, ,3,]
-let secondArray = [ ,4, ,5, ,6]
+let firstArray = [1, , 2, , 3,]
+let secondArray = [, 4, , 5, , 6]
 console.log(firstArray.concat(secondArray))
 
 // concat on non array object
@@ -69,14 +69,14 @@ console.log("")
 console.log("copywithin")
 
 // copywithin
-let array01 = ["a","b","c","d","e"]
-console.log(array01.copyWithin(0,2,4)) //target,starting,ending
-console.log(array01.copyWithin(1,3))  //target,starting
-console.log(array01.copyWithin(2))  
+let array01 = ["a", "b", "c", "d", "e"]
+console.log(array01.copyWithin(0, 2, 4)) //target,starting,ending
+console.log(array01.copyWithin(1, 3))  //target,starting
+console.log(array01.copyWithin(2))
 
 // using copywithin on sparse array
 let array02 = [1, , 2]
-console.log(array02.copyWithin(1,0,1))
+console.log(array02.copyWithin(1, 0, 1))
 
 console.log("")
 // indexof
@@ -101,7 +101,7 @@ console.log(d.at(6))
 
 // using in function
 let d1 = ["Tamil", "English", "Maths", "Science"]
-function lastEle(arr){
+function lastEle(arr) {
     return arr.at(-1)
 }
 let item = lastEle(d1)
@@ -153,17 +153,17 @@ console.log("")
 console.log("splice()")
 
 let i = [1, 2, 3, 4];
-i.splice(0,0,0)
+i.splice(0, 0, 0)
 console.log(i)
 
 // deletecount as negative
 let i1 = [1, 2, 3, 4]
-i1.splice(0,-1,6)
+i1.splice(0, -1, 6)
 console.log(i1)
 
 // when deletecount is greater than array length
 let i2 = [1, 2, 3, 4, 5]
-i2.splice(0,6,7)
+i2.splice(0, 6, 7)
 console.log(i2)
 
 // to remove all elements from a specific index
@@ -172,11 +172,78 @@ i3.splice(1);
 console.log(i3);
 
 // splice on sparse array
-let i4 = [1, ,3, ,5];
-i4.splice(1,2);
+let i4 = [1, , 3, , 5];
+i4.splice(1, 2);
 console.log(i4);
-//
-// console.log("")
+
+// fill()
+console.log("");
+console.log("fill()");
+
+let i5 = [1, 2, 3, 4, 5];
+i5.fill(0, 2, 4);
+console.log(i5);
+
+// sort()
+console.log("");
+console.log("sort()");
+
+const i6 = [1, 2, 3, 4, 5];
+i6.sort((a, b) => b - a);
+console.log(i6);
+
+// reverse()
+console.log("");
+console.log("reverse()");
+
+let i7 = [1, 2, 3, 4,5];
+i7.reverse()
+console.log(i7);
+
+// foreach()
+console.log("");
+console.log("forEach()");
+
+let i8 = [1, 2, 3, 4, 5];
+i8.forEach(num => {
+    console.log(num*3);
+})
+
+// map()
+console.log("");
+console.log("map()");
+
+let i9 = [1, 2, 3, 4, 5];
+let i10 = i9.map((x) => x*2);
+console.log(i10);
+
+// filter()
+console.log("");
+console.log("filter()");
+
+let i11 = [1, 2, 3, 4, 5];
+i12 = i11.filter(x => x>3);
+console.log(i12);
+
+// reduce()
+console.log("");
+console.log("reduce()");
+
+let i13 = [1, 2, 3, 4, 5];
+let i14 = i13.reduce((acc,cur)=> acc * cur,1);
+console.log(i14);
+
+// reduceRight()
+console.log("");
+console.log("reduceRight()");
+
+let i15 = ['a','b','c','d'];
+let i16 = i15.reduceRight((x,i)=>x+i,'');
+console.log(i16);
+
+// some()
+console.log("");
+console.log("some()");
 
 
 // console.log("")
