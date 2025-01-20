@@ -192,9 +192,22 @@
             }
         }
         const hedgehog = new Hedgehog("akash", "black");
-        hedgehog.speak();  
-        hedgehog.eat();  
+        hedgehog.speak();
+        hedgehog.eat();
 
+        // JSON methods
+        // stringfy
+        let user = {
+            name: "Karthi",
+            age: 22,
+            role: "Trainee"
+        };
+        let jsonData = JSON.stringify(user);
+        console.log(jsonData);
+
+        // parse
+        let jsonResponse = JSON.parse(jsonData);
+        console.log(jsonResponse);
 
     </script>
 </body>
