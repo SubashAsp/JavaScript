@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <!-- Review coding -->
+<body>
+    <script>
+        let awesomeCar1;
+        var awesomeCar2;
+        function varVsLetFunction() {
+             awesomeCar1 = "Audi";
+             awesomeCar2 = "Mercedes";
+        }
+        varVsLetFunction();
+        console.log(awesomeCar1);
+        //Audi
+        console.log(awesomeCar2);
+        //Mercedes
+
+        function sum(a, b) {
+return a+b;
+}
+
+var multiplyBy2 = function(num){
+  console.log( num * 2);
+}
+let arrow = (num) =>{
+    console.log(num * 2);
+}
+arrow(5);
+
+let person={
+    name: "subash",
+    age: 22
+};
+let {name, age} = person;
+console.log(name);
+console.log(age);
+
+    </script>
+</body>
+
+</html>

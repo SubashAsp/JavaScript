@@ -11,8 +11,8 @@
     <script>
         const myPromise = new Promise(callback);
         function callback(resolve, reject) {
-            const error = true;
-            if (!error) {
+            const test = true;
+            if (test) {
                 setTimeout(() => {
                     resolve('success');
                 }, 2000);
