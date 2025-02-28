@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variables</h1>
+    
+    <script>
+        // using var
+        var a = 5;
+        console.log(a);
+        // var variable can be redeclared
+        var a = 6;
+        console.log(a);
+        // var variable can be reassigned
+        a = "subash";
+        console.log(a);
+        
+        // using let 
+        let b = 7;
+        console.log(b);
+        // let variable cannot be redeclared
+        // let b = 10;
+        // console.log(b);
+        // let variable can be reassigned
+        b = "subash";
+        console.log(b);
+        
+        // using const
+        const c = 10;
+        console.log(c);
+        // const variable cannot be redeclared
+        // const c = 7;
+        // console.log(c);
+        // const variable cannot be reasigned
+        // c = "subash";
+        // console.log(c);
+
+        console.log();
+        console.log("Scope difference of each variable");
+        // scope difference
+        let d = "out let";
+        var e = "out var";
+        const f = "out const";
+        function example()
+        {
+            if (true){
+                let d = "let";
+                var e = "var";
+                const f = "const";
+            }
+            console.log(d); 
+            console.log(e);
+            console.log(f);
+        }
+        example()
+
+        console.log();
+        console.log("Hoisting");
+        // hoisting a variable
+        console.log(g);
+        var g = "Hi";
+        console.log(g);
+
+        // console.log(h);
+        let h = "Good";
+        console.log(h);
+
+        // console.log(i);
+        const i = "Morning";
+        console.log(i);
+
+        console.log();
+        console.log("Datatypes - stored by values");
+        //  datatypes in js
+        let num = 12;
+        console.log(typeof(num));
+        let str = "Subash";
+        console.log(typeof(str));
+        let bool = true;
+        console.log(typeof(bool));
+        let cointainer = null;
+        console.log(typeof(cointainer));
+        let role;
+        console.log(typeof(role));
+        let sym = Symbol("Subash");
+        console.log(typeof(sym));
+        let bigi = 123n;
+        console.log(typeof(bigi));
+
+        // declaring a symbol
+        let symb = Symbol();
+        console.log(symb);
+
+        // symbol with description
+        let desc = Symbol("Hello_there");
+        console.log(desc);
+
+        // using symbol as a unique property key
+        let unique_key = Symbol("id");
+        let user = {
+            name: "subash",
+            [unique_key]: 123456
+        };
+        console.log(user.name);
+        console.log(user[unique_key]);
+        console.log(user);
+
+        //  stored by reference (data types)
+        console.log();
+        console.log("Data types - stored by reference");
+        console.log();
+
+        // objects
+        console.log("Objects : ");
+        let obj = {name: "Subash", age: 20};
+        console.log(obj.name);
+        console.log(obj.age);
+
+        console.log();
+        // arrays
+        console.log("Arrays :");
+        let ary = ['subash', 22, 'logu', 23];
+        console.log("length of the array", ary.length)
+        console.log(ary[0]);
+        console.log(ary[1]);
+        console.log(ary[2]);
+        console.log(ary[3]);
+
+        console.log();
+        // functions
+        console.log("Functions :");
+        function sample(){
+            console.log("Displaying inside a function.");
+        }
+        sample()
+
+        // variable mutation / Dynamic typing
+        let dyna = "Subash";
+        console.log(typeof(dyna));
+        dyna = 20;
+        console.log(typeof(dyna));
+
+        // using const in object
+        const person = {
+            name: "Subash",
+            age: 20
+        }
+        console.log(person.age);
+        person.age = 22;
+        console.log(person.age);
+        console.log(person.name);
+        person.name = "Thiru";
+        console.log(person.name);
+
+        // person = {
+        //     name: "Thiru",
+        //     age: 21
+        // }
+        // console.log(person)
+
+        // using const in arrays
+        const numbers = [1, 2, 3, 45, 6];
+        console.log(numbers);
+        numbers.push(7);
+        console.log(numbers);
+
+        // numbers = [3, 4 ,6];
+        // console.log(numbers);
+
+        console.log();
+        // templeate literals
+        console.log("Template Literals.")
+        let name = "Subash";
+        console.log("Hello " + name); // string concatnation
+        console.log(`Hello ${name}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Strings</h1>
+
+    <script>
+        let a = 'Subash';
+        console.log(a);
+        let b = "Subash";
+        console.log(b);
+        let c = `Subasht `;
+        console.log(c);
+        console.log(c.length);
+        console.log(c.toUpperCase());
+        console.log(c.toLowerCase());
+        console.log(c[0]);
+        console.log(c.charAt(2));
+        console.log(c.indexOf('s'));
+        console.log(c.indexOf('S'));
+        console.log(c.indexOf('s'));
+        console.log(c.lastIndexOf('s'));
+        console.log(c.includes('su'));
+        console.log(c.startsWith('Su'));
+        console.log(c.endsWith('sh'));
+        console.log(c.slice(-4, -1));
+        console.log(c.substring(0, 3));
+        console.log(c.replace('Subasht', 'HelloWorld'));
+        let d = 'subash logu subash';
+        console.log(d.replace('subash', 'karthi'));
+        console.log(d.replace(/subash/g, 'karthi'));
+        let e = "good morning everyone";
+        console.log(e.split(" "));
+        let f = "   subash   ";
+        console.log(f.trim());
+        console.log(f.trimStart());
+        console.log(f.trimEnd());
+
+        console.log(typeof f);
+
+        console.log(c.repeat(3))
+
+        console.log('subash\tt')
+
+        let h = String(123);
+        console.log(h + " " + typeof h);
+
+        let i = 123;
+        let i1 = i.toString();
+        console.log(i1);
+
+        let j = "subash";
+        console.log(j.split("").reverse().join(""));
+ 
+        
+    </script>
+</body>
+</html>

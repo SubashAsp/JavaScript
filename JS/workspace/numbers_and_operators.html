@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Numbers and Operators</h1>
+
+    <script>
+        console.log("Numbers");
+        let integer = 12;
+        let float = 12.50;
+        let exp = 2e3;
+        let infinty = 1/0;
+        let not_a_number = "hello"/2;
+        console.log(integer, float, exp, infinty, not_a_number);
+
+        console.log()
+        console.log("arithmetic operators");
+        // airthmetic operators
+        let a = 4, b = 3;
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+        console.log(a % b);
+        console.log(a ** b);
+
+        console.log()
+        console.log("Increment and decrement operators.");
+        // increment and decrement operators
+        let num = 5;
+        console.log(num++)
+        console.log(num);
+        console.log(++num);
+        console.log(num--);
+        console.log(num);
+        console.log(--num);
+
+        console.log();
+        console.log("Assignment Operator");
+        // Assignment operator
+        let c = 10;
+        console.log(c);
+        c += 5;
+        console.log(c);
+        c -= 5;
+        console.log(c);
+        c *= 5;
+        console.log(c);
+        c /= 5;
+        console.log(c);
+        c %= 4;
+        console.log(c);
+        c **= 5;
+        console.log(c);
+        
+        console.log();
+        console.log("Comparsion operator");
+        //  Comparsion Operator
+        let d = 5, e = '5';
+        console.log(d == e);
+        console.log(d === e);
+        console.log(d != e);
+        console.log(d !== e);
+        e = 7;
+        console.log(d > e);
+        console.log(d < e);
+        console.log(d >=10);
+        console.log(d <= 10);
+
+        console.log();
+        console.log("Number Methods.");
+        // number methods
+        let numb = 1.84856789;
+        // console.log(numb.toFixed(2));
+        console.log(numb.toPrecision(4));
+
+        console.log(Number.isNaN(parseInt("and")));
+
+        console.log(Math.abs(-5))
+        console.log(Math.round(4.4));
+        console.log(Math.ceil(5.3))
+        console.log(Math.floor(5.9))
+        console.log(Math.pow(5))
+        
+    </script>
+</body>
+</html>
